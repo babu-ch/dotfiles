@@ -22,6 +22,11 @@ alias vstat='vagrant status'
 alias vup='vagrant up'
 alias vhalt='vagrant halt'
 
+#typo
+alias bi='vi'
+alias vbi='vi'
+alias bvi='vi'
+
 # bind
 
 
