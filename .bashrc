@@ -9,7 +9,6 @@ alias lla="ls -altG"
 alias vi="vim -p"
 alias grep='grep --color'
 
-# alias git
 alias br='git branch'
 alias pull='git pull'
 alias gco='git checkout'
@@ -17,6 +16,11 @@ alias gadd='git add'
 alias gci='git commit -m'
 alias gdiff='git diff'
 alias glog='git log'
+alias fetch='git fetch'
+
+alias vstat='vagrant status'
+alias vup='vagrant up'
+alias vhalt='vagrant halt'
 
 # bind
 
