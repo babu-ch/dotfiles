@@ -26,9 +26,9 @@ alias vhalt='vagrant halt'
 alias bi='vi'
 alias vbi='vi'
 alias bvi='vi'
+alias vio='vi'
 
 # bind
-
 
 # function
 function vimemo() {
