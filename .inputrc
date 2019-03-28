@@ -1,3 +1,0 @@
-set completion-ignore-case on
-"\C-f": forward-word
-"\C-b": forward-word
