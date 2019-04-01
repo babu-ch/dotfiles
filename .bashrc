@@ -1,6 +1,9 @@
 PS1="\[\e[32m\e[1m\][\u \W \t]\[\e[0m\]\\$ "
 
 # bind
+bind -x '"\C-k\C-k" : ll'
+
+# alias
 source ~/.bash_aliases
 
 # function
