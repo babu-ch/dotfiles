@@ -7,15 +7,17 @@ alias lla="ls -altG"
 alias vi="vim -p"
 alias grep='grep --color'
 
-alias gbr='git branch'
-alias gpull='git pull'
+# git
+alias g='git'
+alias ga='git add'
+alias gd='git diff'
+alias gs='git status'
+alias gp='git push'
+alias gb='git branch'
+alias gst='git status'
 alias gco='git checkout'
-alias gadd='git add'
-alias gci='git commit -m'
-alias gdiff='git diff'
-alias glog='git log'
-alias gfetch='git fetch'
-alias gpush='git push'
+alias gf='git fetch'
+alias gc='git commit'
 
 alias vstat='vagrant status'
 alias vup='vagrant up'
