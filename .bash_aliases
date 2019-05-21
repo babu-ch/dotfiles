@@ -16,6 +16,7 @@ alias downloads="cd ~/Downloads"
 
 # git
 alias g='git'
+alias gl='git log'
 alias ga='git add'
 alias gd='git diff'
 alias gs='git status'
