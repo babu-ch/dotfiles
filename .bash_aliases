@@ -17,6 +17,7 @@ alias develop="cd ~/develop;pwd;ll"
 
 # git
 alias g='git'
+alias gl='git log'
 alias ga='git add'
 alias gd='git diff'
 alias gs='git status'
