@@ -12,7 +12,8 @@ alias grep='grep --color'
 alias .="pwd"
 alias ..="cd .."
 alias ...="cd ../../"
-alias downloads="cd ~/Downloads"
+alias downloads="cd ~/Downloads;pwd;ll"
+alias develop="cd ~/develop;pwd;ll"
 
 # git
 alias g='git'
@@ -31,11 +32,11 @@ alias gci='git commit -m'
 alias vstat='vagrant status'
 alias vup='vagrant up'
 alias vhalt='vagrant halt'
+alias vssh='vagrant ssh'
 
 #typo
 alias v='vi'
+alias vvi='vi'
 alias bi='vi'
 alias vbi='vi'
 alias bvi='vi'
-
-
