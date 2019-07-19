@@ -6,6 +6,9 @@ bind -x '"\C-k\C-p" : pwd'
 
 bind -x '"\C-g\C-b" : git branch'
 
+bind '"\C-f": forward-word'
+bind '"\C-b": backward-word'
+
 # alias
 source ~/.bash_aliases
 

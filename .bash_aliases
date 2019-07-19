@@ -10,8 +10,8 @@ alias grep='grep --color'
 
 # chdir
 alias .="pwd"
-alias ..="cd .."
-alias ...="cd ../../"
+alias ..="cd ..;pwd;ll"
+alias ...="cd ../../;pwd;ll"
 alias downloads="cd ~/Downloads;pwd;ll"
 alias develop="cd ~/develop;pwd;ll"
 
