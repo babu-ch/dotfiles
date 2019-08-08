@@ -6,7 +6,7 @@ echo '### profile setting start'
 if [ -e ~/.bash_profile ]; then
 	echo '.bash_profile exist'
 
-	grep 'source ~/.bashrc' ~/.bash_profile >> /dev/null
+	grep -E '(source|\.) ~/.bashrc' ~/.bash_profile >> /dev/null
 	if [ $? -eq 0 ]; then
 		echo '.bashrc setting exist'
 	else
