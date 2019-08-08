@@ -9,7 +9,6 @@ alias vi="vim -p"
 alias grep='grep --color'
 
 # chdir
-alias .="pwd"
 alias ..="cd ..;pwd;ll"
 alias ...="cd ../../;pwd;ll"
 alias downloads="cd ~/Downloads;pwd;ll"
