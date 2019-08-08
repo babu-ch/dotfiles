@@ -1,4 +1,4 @@
-PS1="\[\e[32m\e[1m\]\W \t > \[\e[0m\]"
+PS1="\[\e[32m\e[1m\]\u@\h:\e[35m\W \t\[\e[0m\] > "
 
 # bind
 bind -x '"\C-k\C-k" : ll'
