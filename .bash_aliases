@@ -7,6 +7,8 @@ alias ll="ls -ltG"
 alias lla="ls -altG"
 alias vi="vim -p"
 alias grep='grep --color'
+alias grepr='grep -r'
+alias grepri='grep -ri'
 
 # chdir
 alias ..="cd ..;pwd;ll"
