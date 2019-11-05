@@ -41,11 +41,17 @@ alias grcontinue='git rebase --continue'
 alias grskip='git rebase --skip'
 alias greset='git reset'
 alias gstash='git stash'
+alias gstashu='git stash -u'
 
 alias vstat='vagrant status'
 alias vup='vagrant up'
 alias vhalt='vagrant halt'
 alias vssh='vagrant ssh'
+
+alias nr='npm run'
+alias nrd='npm run dev'
+
+alias artisan='php artisan'
 
 #typo
 alias v='vi'
