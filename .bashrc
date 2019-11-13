@@ -1,4 +1,7 @@
-PS1="\[\e[34m\e[1m\]\u@\h:\[\e[35m\]\W \t > \[\e[0m\]"
+COLOR_USER_HOST="\[\e[32m\]"
+COLOR_DIR="\[\e[33m\]"
+COLOR_RESET="\[\e[0m\]"
+PS1="${COLOR_USER_HOST}\u@\h:${COLOR_DIR}\W \t > ${COLOR_RESET}"
 
 # bind
 bind -x '"\C-k\C-k" : ll'
