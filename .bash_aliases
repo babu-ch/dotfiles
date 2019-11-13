@@ -50,6 +50,7 @@ alias vssh='vagrant ssh'
 
 alias nr='npm run'
 alias nrd='npm run dev'
+alias nrw='npm run watch'
 
 alias artisan='php artisan'
 
