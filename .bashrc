@@ -4,13 +4,15 @@ COLOR_RESET="\[\e[0m\]"
 PS1="${COLOR_USER_HOST}\u@\h:${COLOR_DIR}\W \t > ${COLOR_RESET}"
 
 # bind
-bind -x '"\C-k\C-k" : ll'
-bind -x '"\C-k\C-p" : pwd'
+if [ -t 1 ];then
+    bind -x '"\C-k\C-k" : ll'
+    bind -x '"\C-k\C-p" : pwd'
 
-bind -x '"\C-g\C-b" : git branch'
+    bind -x '"\C-g\C-b" : git branch'
 
-bind '"\C-f": forward-word'
-bind '"\C-b": backward-word'
+    bind '"\C-f": forward-word'
+    bind '"\C-b": backward-word'
+fi
 
 # alias
 source ~/.bash_aliases
