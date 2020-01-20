@@ -28,7 +28,7 @@ do
     [[ "$f" == ".DS_Store" ]] && continue
 
     echo "make symbolic $f"
-    ln -snfv "$pwd"/"$f" "$HOME"/"$f"
+    ln -sniv "$pwd"/"$f" "$HOME"/"$f"
 done
 echo '### synbolic setting end'
 
