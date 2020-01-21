@@ -3,7 +3,7 @@ alias eb="vi ~/.bashrc"
 alias ebp="vi ~/.bash_profile"
 alias vimrc="vi ~/.vimrc"
 alias re="source ~/.bash_profile"
-alias ll="ls -ltG"
+alias ll="ls -ltG;echo ------; echo -n 'line count='; ls -1 | wc -l"
 alias lla="ls -altG"
 alias vi="vim -p"
 alias grep='grep --color'
