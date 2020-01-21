@@ -12,3 +12,17 @@ set hlsearch
 
 " toggle number
 command Nu set nu!
+
+set laststatus=2
+" left
+set statusline=%f
+set statusline+=%m
+set statusline+=%r
+" right
+set statusline+=%=
+set statusline+=[%{&fileencoding}]
+set statusline+=[%l/%L]
+
+" bind
+noremap <F3> <esc>:noh<Enter>
+noremap <F4> <esc>:q<Enter>
