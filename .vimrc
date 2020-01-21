@@ -24,3 +24,7 @@ set statusline+=[%l/%L]
 noremap <F2> <esc>:set nu!<Enter>
 noremap <F3> <esc>:noh<Enter>
 noremap <F4> <esc>:q<Enter>
+
+inoremap <F2> <esc>:set nu!<Enter>
+inoremap <F3> <esc>:noh<Enter>
+inoremap <F4> <esc>:q<Enter>
