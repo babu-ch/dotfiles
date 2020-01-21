@@ -10,9 +10,6 @@ set incsearch
 set wrapscan
 set hlsearch
 
-" toggle number
-command Nu set nu!
-
 set laststatus=2
 " left
 set statusline=%f
@@ -24,5 +21,6 @@ set statusline+=[%{&fileencoding}]
 set statusline+=[%l/%L]
 
 " bind
+noremap <F2> <esc>:set nu!<Enter>
 noremap <F3> <esc>:noh<Enter>
 noremap <F4> <esc>:q<Enter>
