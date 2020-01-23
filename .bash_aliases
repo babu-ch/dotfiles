@@ -9,6 +9,7 @@ alias vi="vim -p"
 alias grep='grep --color'
 alias grepr='grep -r'
 alias grepri='grep -ri'
+alias wcl='wc -l'
 
 # chdir
 alias ..="cd ..;pwd;ll"
