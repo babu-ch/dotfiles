@@ -14,6 +14,11 @@ if [ -t 1 ];then
     bind '"\C-b": backward-word'
 fi
 
+if [[ -t 0 ]]; then
+  stty stop undef
+  stty start undef
+fi
+
 # alias
 source ~/.bash_aliases
 
