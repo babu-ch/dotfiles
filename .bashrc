@@ -3,6 +3,16 @@ COLOR_DIR="\[\e[33m\]"
 COLOR_RESET="\[\e[0m\]"
 PS1="${COLOR_USER_HOST}\u@\h:${COLOR_DIR}\W \t > ${COLOR_RESET}"
 
+# セッションクローズ時の.bash_historyへの書き込みをoff
+shopt -u histappend
+# .bash_historyとメモリ上のコピーを頻繁に同期
+share_history(){
+    history -a
+    history -c
+    history -r
+}
+PROMPT_COMMAND='share_history'
+
 # bind
 if [ -t 1 ];then
     bind -x '"\C-k\C-k" : ll'
