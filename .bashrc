@@ -18,7 +18,8 @@ if [ -t 1 ];then
     bind -x '"\C-k\C-k" : ll'
     bind -x '"\C-k\C-p" : pwd'
 
-    bind -x '"\C-g\C-b" : git branch'
+    bind -x '"\C-g\C-b" : echo "git branch";git branch'
+    bind -x '"\C-g\C-d" : echo "git diff";git diff'
 
     bind '"\C-f": forward-word'
     bind '"\C-b": backward-word'
