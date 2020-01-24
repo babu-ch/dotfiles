@@ -37,3 +37,8 @@ source ~/.bash_aliases
 function vimemo() {
     vi ~/memos/memo_`date +%Y_%m_%d`
 }
+
+function lastdir() {
+  dir=$(cat ~/.lastdir)
+  cd $dir
+}
