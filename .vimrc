@@ -1,7 +1,7 @@
 set nu
 set tabpagemax=50
-set tabstop=4
-set shiftwidth=4
+set tabstop=2
+set shiftwidth=2
 set list listchars=tab:\▸\-
 set expandtab
 set ignorecase
@@ -9,6 +9,7 @@ set smartcase
 set incsearch
 set wrapscan
 set hlsearch
+set cursorline
 
 set laststatus=2
 " left
@@ -32,3 +33,11 @@ inoremap <F3> <esc>:noh<Enter>
 inoremap <F4> <esc>:q<Enter>
 inoremap <C-w> <esc>:q<Enter>
 inoremap <C-s> <esc>:w<Enter>
+
+
+augroup MyHighlight
+  au!
+  autocmd VimEnter,ColorScheme * hi! CursorLine term=underline cterm=NONE gui=NONE ctermbg=black
+augroup END
+
+colorscheme delek
