@@ -38,6 +38,7 @@ inoremap <C-s> <esc>:w<Enter>
 augroup MyHighlight
   au!
   autocmd VimEnter,ColorScheme * hi! CursorLine term=underline cterm=NONE gui=NONE ctermbg=black
+  autocmd VimEnter,ColorScheme * hi! def link StatusLine CursorLine
 augroup END
 
 colorscheme delek
