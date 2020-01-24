@@ -40,5 +40,10 @@ function vimemo() {
 
 function lastdir() {
   dir=$(cat ~/.lastdir)
+  echo $dir
   cd $dir
+}
+
+function removeLastLine() {
+  ruby -i -e 'print ARGF.read.strip' $1
 }
