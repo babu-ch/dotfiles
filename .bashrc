@@ -1,7 +1,17 @@
 COLOR_USER_HOST="\[\e[32m\]"
 COLOR_DIR="\[\e[33m\]"
 COLOR_RESET="\[\e[0m\]"
-PS1="${COLOR_USER_HOST}\u@\h:${COLOR_DIR}\W \t > ${COLOR_RESET}"
+
+# $1 に設定したやつを追加で表示
+set_ps1() {
+  if [ -z $1 ];
+  then
+    PS1="${COLOR_USER_HOST}\u@\h:${COLOR_DIR}\W \t > ${COLOR_RESET}"
+  else
+    PS1="${COLOR_USER_HOST}\u@\h:${COLOR_DIR}\W \t [$1] > ${COLOR_RESET}"
+  fi
+}
+set_ps1
 
 # セッションクローズ時の.bash_historyへの書き込みをoff
 shopt -u histappend
@@ -11,7 +21,14 @@ share_history(){
     history -c
     history -r
 }
-PROMPT_COMMAND='share_history'
+
+# PROMPT_COMMAND
+prompt_dispatch() {
+  current=$(git branch 2>/dev/null | grep '*' | cut -f2 -d' ')
+  set_ps1 $current
+  share_history
+}
+PROMPT_COMMAND='prompt_dispatch'
 
 # bind
 if [ -t 1 ];then
