@@ -64,3 +64,11 @@ function lastdir() {
 function removeLastLine() {
   ruby -i -e 'print ARGF.read.strip' $1
 }
+
+function gco_select() {
+  select branch in $(git branch | sed -e "s/* /[current]/")
+  do
+    git checkout "$branch"
+    break
+  done
+}
