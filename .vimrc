@@ -21,6 +21,8 @@ set statusline+=%=
 set statusline+=[%{&fileencoding}]
 set statusline+=[%l/%L]
 
+syntax on
+
 " bind
 noremap <F2> <esc>:set nu!<Enter>
 noremap <F3> <esc>:noh<Enter>
