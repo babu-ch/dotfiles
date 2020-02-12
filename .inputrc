@@ -1,0 +1,7 @@
+$if mysql
+"\C-xd": "SHOW DATABASES;\n"
+"\C-xt": "SHOW TABLES"
+"\C-xs": "SELECT * FROM "
+"\C-f": forward-word
+"\C-b": backward-word
+$endif
