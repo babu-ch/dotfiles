@@ -10,6 +10,7 @@ set incsearch
 set wrapscan
 set hlsearch
 set cursorline
+set vb t_vb=
 
 set laststatus=2
 " left
