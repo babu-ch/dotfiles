@@ -12,6 +12,7 @@ alias grepri='grep -ri'
 alias wcl='wc -l'
 
 # chdir
+alias cd-="cd -"
 alias ..="cd ..;pwd;ll"
 alias ...="cd ../../;pwd;ll"
 alias downloads="cd ~/Downloads;pwd;ll"
