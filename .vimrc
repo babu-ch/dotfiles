@@ -24,16 +24,30 @@ set statusline+=[%l/%L]
 
 syntax on
 
+" functions
+function ExecCurrentFile()
+  let map = { "py":"python", "rb":"ruby", "sh":"sh", "php":"php" }
+  let extension = expand("%:e")
+  if !has_key(map, extension)
+    echo 'unknown extension!! (TT)'
+    return
+  endif
+  let execCommand=map[extension]
+  execute "!" . execCommand . " %"
+endfunction
+
 " bind
 noremap <F2> <esc>:set nu!<Enter>
 noremap <F3> <esc>:noh<Enter>
 noremap <F4> <esc>:q<Enter>
+noremap <F5> <esc>:call ExecCurrrentFile()<Enter>
 noremap <C-w> <esc>:q<Enter>
 noremap <C-s> <esc>:w<Enter>
 
 inoremap <F2> <esc>:set nu!<Enter>
 inoremap <F3> <esc>:noh<Enter>
 inoremap <F4> <esc>:q<Enter>
+inoremap <F5> <esc>:call ExecCurrentFile<Enter>
 inoremap <C-w> <esc>:q<Enter>
 inoremap <C-s> <esc>:w<Enter>
 
