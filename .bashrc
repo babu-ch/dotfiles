@@ -72,3 +72,22 @@ function gco_select() {
     break
   done
 }
+
+function rm_select() {
+  echo 'select delete file'
+  echo 'specify multiple files separated by commas'
+
+  eval dirList=("$(ls --quoting-style=shell)")
+
+  for ((i = 0; i < ${#dirList[@]}; i++))
+  do
+    echo "$i => ${dirList[$i]}"
+  done
+
+  read -p "input num > " ans
+
+  for num in $(echo $ans | tr ',' '\n')
+  do
+    rm -i "${dirList[$num]}"
+  done
+}
