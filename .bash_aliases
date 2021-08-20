@@ -57,7 +57,7 @@ alias nr='npm run'
 alias nrd='npm run dev'
 alias nrs='npm run serve'
 alias nrw='npm run watch'
-alias nrw='npm run test'
+alias nrt='npm run test'
 
 alias artisan='php artisan'
 
