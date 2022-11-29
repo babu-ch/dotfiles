@@ -56,6 +56,7 @@ augroup MyHighlight
   au!
   autocmd VimEnter,ColorScheme * hi! CursorLine term=underline cterm=NONE gui=NONE ctermbg=black
   autocmd VimEnter,ColorScheme * hi! def link StatusLine CursorLine
+  autocmd VimEnter,ColorScheme * hi! Normal ctermfg=231 ctermbg=16 cterm=NONE
 augroup END
 
 colorscheme delek
