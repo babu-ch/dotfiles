@@ -62,3 +62,7 @@ alias bi='vi'
 alias vbi='vi'
 alias bvi='vi'
 alias vr='vi -R'
+
+# ni
+alias nrt='nr test'
+alias nrs='nr serve'

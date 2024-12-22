@@ -91,3 +91,9 @@ function rm_select() {
     rm -i "${dirList[$num]}"
   done
 }
+
+export NODE_OPTIONS="--max-old-space-size=8192"
+
+eval "$(nodenv init -)"
+
+export NI_DEFAULT_AGENT="npm" # default "prompt"
