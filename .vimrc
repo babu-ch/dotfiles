@@ -60,3 +60,6 @@ augroup MyHighlight
 augroup END
 
 colorscheme delek
+
+set visualbell
+set noerrorbells

@@ -47,6 +47,9 @@ alias grskip='git rebase --skip'
 alias greset='git reset'
 alias gstash='git stash'
 alias gstashu='git stash -u'
+alias gdelete="git branch -d \$(gb | grep -vE 'develop|main')"
+alias gDelete="git branch -D \$(gb | grep -vE 'develop|main')"
+
 
 alias vstat='vagrant status'
 alias vup='vagrant up'
@@ -65,4 +68,6 @@ alias vr='vi -R'
 
 # ni
 alias nrt='nr test'
+alias nrtt='nr test:type'
 alias nrs='nr serve'
+alias nrd='nr dev'
