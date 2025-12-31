@@ -1,3 +1,7 @@
+if [[ "$TERMINAL_EMULATOR" == "JetBrains-JediTerm" ]]; then
+    return 0
+fi
+
 COLOR_USER_HOST="\[\e[32m\]"
 COLOR_DIR="\[\e[33m\]"
 COLOR_RESET="\[\e[0m\]"
@@ -95,3 +99,17 @@ function rm_select() {
 export NODE_OPTIONS="--max-old-space-size=8192"
 
 eval "$(nodenv init -)"
+
+# pnpm
+export PNPM_HOME="$HOME/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+. "$HOME/.deno/env"
+. "$HOME/.cargo/env"
