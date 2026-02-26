@@ -26,6 +26,8 @@ for f in .??*
 do
     [[ "$f" == ".git" ]] && continue
     [[ "$f" == ".DS_Store" ]] && continue
+    [[ "$f" == ".idea" ]] && continue
+    [[ "$f" == ".gitignore" ]] && continue
 
     echo "make symbolic $f"
     ln -sniv "$pwd"/"$f" "$HOME"/"$f"
