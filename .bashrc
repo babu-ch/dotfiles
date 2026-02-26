@@ -31,6 +31,7 @@ prompt_dispatch() {
   current=$(git branch 2>/dev/null | grep '*' | cut -f2 -d' ')
   set_ps1 $current
   share_history
+  return 0
 }
 PROMPT_COMMAND='prompt_dispatch'
 
