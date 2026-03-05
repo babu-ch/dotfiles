@@ -1,7 +1,3 @@
-if [[ "$TERMINAL_EMULATOR" == "JetBrains-JediTerm" ]]; then
-    return 0
-fi
-
 COLOR_USER_HOST="\[\e[32m\]"
 COLOR_DIR="\[\e[33m\]"
 COLOR_RESET="\[\e[0m\]"
