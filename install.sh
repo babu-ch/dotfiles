@@ -2,6 +2,18 @@
 
 pwd=`pwd`
 
+make_link() {
+    src=$1
+    dest=$2
+    if [ -L "$dest" ]; then
+        return
+    elif [ -e "$dest" ]; then
+        ln -sniv "$src" "$dest"
+    else
+        ln -snfv "$src" "$dest"
+    fi
+}
+
 echo '### profile setting start'
 if [ -e ~/.bash_profile ]; then
 	echo '.bash_profile exist'
@@ -30,7 +42,7 @@ do
     [[ "$f" == ".gitignore" ]] && continue
 
     echo "make symbolic $f"
-    ln -snfv "$pwd"/"$f" "$HOME"/"$f"
+    make_link "$pwd/$f" "$HOME/$f"
 done
 echo '### synbolic setting end'
 
@@ -39,7 +51,7 @@ mkdir -p "$HOME/.claude"
 for f in claude/settings.json claude/notify.sh
 do
     echo "make symbolic $f"
-    ln -snfv "$pwd/$f" "$HOME/.$f"
+    make_link "$pwd/$f" "$HOME/.$f"
 done
 echo '### claude setting end'
 
