@@ -1,1 +1,11 @@
 .idea/
+
+# Sensitive files
+.env
+.env.*
+*.pem
+*.key
+*.p12
+.netrc
+.aws/
+.ssh/
