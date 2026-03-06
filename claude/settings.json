@@ -1,0 +1,45 @@
+{
+  "hooks": {
+    "Stop": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo '{\"cwd\": \"'\"$(pwd)\"'\", \"notification_type\": \"stop\"}' | ~/.claude/notify.sh"
+          }
+        ]
+      }
+    ],
+    "Notification": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "~/.claude/notify.sh"
+          }
+        ]
+      }
+    ]
+  },
+  "permissions": {
+    "allow": [
+    "Bash(git:*)",
+    "Bash(ls:*)",
+    "Bash(cat:*)",
+    "Bash(pwd:*)",
+    "Bash(cd:*)",
+    "Bash(find:*)",
+    "Bash(grep:*)",
+    "Bash(npm:*)",
+    "Bash(pnpm:*)",
+    "Bash(node:*)",
+    "Bash(echo:*)",
+    "Bash(gh:*)",
+    "WebFetch(domain:github.com)",
+    "WebFetch(domain:docs.anthropic.com)",
+    "WebFetch(domain:npmjs.com)"
+    ]
+  }
+}

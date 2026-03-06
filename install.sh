@@ -34,4 +34,13 @@ do
 done
 echo '### synbolic setting end'
 
+echo '### claude setting start'
+mkdir -p "$HOME/.claude"
+for f in claude/settings.json claude/notify.sh
+do
+    echo "make symbolic $f"
+    ln -sniv "$pwd/$f" "$HOME/.$f"
+done
+echo '### claude setting end'
+
 source ~/.bash_profile
