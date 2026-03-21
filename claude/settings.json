@@ -1,4 +1,23 @@
 {
+  "permissions": {
+    "allow": [
+      "Bash(git:*)",
+      "Bash(ls:*)",
+      "Bash(cat:*)",
+      "Bash(pwd:*)",
+      "Bash(cd:*)",
+      "Bash(find:*)",
+      "Bash(grep:*)",
+      "Bash(npm:*)",
+      "Bash(pnpm:*)",
+      "Bash(node:*)",
+      "Bash(echo:*)",
+      "Bash(gh:*)",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:docs.anthropic.com)",
+      "WebFetch(domain:npmjs.com)"
+    ]
+  },
   "hooks": {
     "Stop": [
       {
@@ -23,23 +42,9 @@
       }
     ]
   },
-  "permissions": {
-    "allow": [
-    "Bash(git:*)",
-    "Bash(ls:*)",
-    "Bash(cat:*)",
-    "Bash(pwd:*)",
-    "Bash(cd:*)",
-    "Bash(find:*)",
-    "Bash(grep:*)",
-    "Bash(npm:*)",
-    "Bash(pnpm:*)",
-    "Bash(node:*)",
-    "Bash(echo:*)",
-    "Bash(gh:*)",
-    "WebFetch(domain:github.com)",
-    "WebFetch(domain:docs.anthropic.com)",
-    "WebFetch(domain:npmjs.com)"
-    ]
-  }
+  "enabledPlugins": {
+    "rust-analyzer-lsp@claude-plugins-official": true
+  },
+  "language": "japanese",
+  "cleanupPeriodDays": 365
 }
