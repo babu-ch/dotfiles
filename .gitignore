@@ -9,3 +9,4 @@
 .netrc
 .aws/
 .ssh/
+.claude/
